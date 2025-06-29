@@ -10,7 +10,7 @@
 
 ## ⚙️ Configuration
 
-1. Créé un dossier avec le nom du module dans le dossier `themes`
+1. Créé un dossier avec le nom du thème dans le dossier `themes`
 2. Mettre à l'intérieur un fichier **config.json** 
 ```json
 {
@@ -34,7 +34,7 @@
 
 ## 📬 Publication
 
-> Pour publier un module et qu'il soit disponible via la page des [`themes`](?page=themes) merci de respecter quelques critères.
+> Pour publier un thème et qu'il soit disponible via la page des [`themes`](?page=themes) merci de respecter quelques critères.
 
 1. Avoir un repo github public contenant:
     - Le dossier du theme complet

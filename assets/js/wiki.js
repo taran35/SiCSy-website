@@ -1,16 +1,20 @@
-function toggleSidebar() {
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.sidebar-toggle');
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('open');
-}
 
-document.addEventListener('click', function (e) {
-    const sidebar = document.getElementById('sidebar');
-    if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
-        if (!sidebar.contains(e.target)) {
-            sidebar.classList.remove('open');
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
+            if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove('open');
+            }
         }
-    }
+    });
 });
+
 
 function getMarkdownPage() {
     const params = new URLSearchParams(window.location.search);
@@ -34,10 +38,8 @@ async function loadMarkdown(url, containerId) {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const mdFile = getMarkdownPage();
-    loadMarkdown(mdFile, 'wiki-content');
-});
+
+
 function setupSidebarLinks() {
     const links = document.querySelectorAll('.sidebar a[data-page]');
     links.forEach(link => {
@@ -59,4 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const page = params.get('page') || 'introduction';
     loadMarkdown(`docs/${page}.md`, 'wiki-content');
     setupSidebarLinks();
+    const mdFile = getMarkdownPage();
+    loadMarkdown(mdFile, 'wiki-content');
 });

@@ -21,8 +21,8 @@ Tu peux :
 - Proposer des **améliorations**
 - Signaler des **bugs**
 - Ouvrir une **issue** ou une **pull request**
-- créer des modules (voir [`cette page`](?page=create_modules) pour en savoir plus)
-- créer des thèmes (voir [`cette page`](?page=create_themes) pour en savoir plus)
+- Créer des modules (voir [`cette page`](?page=create_modules) pour en savoir plus)
+- Créer des thèmes (voir [`cette page`](?page=create_themes) pour en savoir plus)
 
 Merci pour ton aide !
 

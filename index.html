@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <header>
-      
-    </header>
-    <main>
-      
-    </main>
-    <footer></footer>
-  </body>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiCSy - Cloud</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="hero">
+      <div class="carousel-gallery-container">
+        <button class="carousel-btn prev" id="btn-prev">⟨</button>
+
+        <div class="carousel-gallery" id="carousel">
+          <img src="images/dash-clair.png" alt="Cloud 1">
+          <img src="images/dash-sombre.png" alt="Cloud 2">
+          <img src="images/index-clair.png" alt="Cloud 3">
+          <img src="images/index-sombre.png" alt="Cloud 4">
+        </div>
+
+        <button class="carousel-btn next" id="btn-next">⟩</button>
+      </div>
+
+
+      <div class="overlay-text">
+        <h1>Votre Cloud Personnalisable</h1>
+        <a href="https://github.com/taran35/SiCSy/releases" class="btn-download" target="_blank"
+          rel="noopener noreferrer">📥 Télécharger</a>
+      </div>
+    </section>
+
+    <div class="arrow-circle" role="button" aria-label="Descendre" tabindex="0">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </div>
+
+
+    <section class="features" id="features">
+      <h2>Pourquoi choisir notre Cloud ?</h2>
+      <div class="features-grid">
+        <article class="feature">
+          <div class="icon">🌐</div>
+          <h3>Gratuit et Open-Source</h3>
+          <p>À démonter, bidouiller, améliorer. Le code est à vous, Rien à cacher. Même pas le coeur du système.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">⚡</div>
+          <h3>Installation simple</h3>
+          <p>Pas besoin de plein de systèmes, un serveur supportant PHP (Nginx, Apache...), une base de données MySQL et
+            un nom de domaine suffisent !</p>
+        </article>
+        <article class="feature">
+          <div class="icon">🧩</div>
+          <h3>Personnalisation</h3>
+          <p>SiCSy et sa communauté propose des thèmes et modules faciles a installer pour vous permettre de customiser
+            votre cloud selon votre besoin.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">🌍</div>
+          <h3>Accessibilité universelle</h3>
+          <p>Disponible sur tous vos appareils, à tout moment. Juste via votre site web</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="visuels">
+      <hr style="width: 80%;">
+      <h2>Quelques visuels </h2>
+      <img src="images/dash-clair.png" alt="Cloud 1" class="visuels_img">
+      <img src="images/dash-sombre.png" alt="Cloud 2" class="visuels_img">
+      <img src="images/index-clair.png" alt="Cloud 3" class="visuels_img">
+      <img src="images/index-sombre.png" alt="Cloud 4" class="visuels_img">
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/index.js"></script>
+
+</body>
+
 </html>

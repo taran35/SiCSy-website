@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki - Cloud</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/markdown.css" />
+    <link rel="stylesheet" href="assets/css/wiki.css" />
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <div class="wiki-container">
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <a href="?page=introduction" data-page="introduction">📘 Introduction</a>
+                <a href="?page=configuration" data-page="configuration">🔧 Configuration</a>
+                <hr style="width: 80%;">
+                <a href="?page=modules" data-page="modules">🧩 Liste des modules disponibles</a>
+                <a href="?page=themes" data-page="themes">🏕 Liste des thèmes disponibles</a>
+                <hr style="width: 80%;">
+                <a href="?page=create_modules" data-page="create_modules">🧩 création de modules</a>
+                <a href="?page=create_themes" data-page="create_themes">🏕 création de thèmes</a>
+            </nav>
+        </aside>
+
+
+        <main class="wiki-content">
+            <div id="wiki-content" class="markdown-body"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/wiki.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

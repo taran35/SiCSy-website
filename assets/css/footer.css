@@ -1,0 +1,47 @@
+.footer {
+    background-color: var(--yellow);
+    padding: 1rem;
+    text-align: center;
+}
+[data-theme="dark"] {
+    .footer {
+        color: black;
+    }
+}
+
+/* Switch CSS */
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked+.slider::before {
+    transform: translateX(20px);
+}

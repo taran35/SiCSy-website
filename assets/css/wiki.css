@@ -1,0 +1,92 @@
+:root {
+    --blue: #003366;
+    --yellow: #ffd600;
+    --bg: #ffffff;
+    --text: #111111;
+    --sidebar-bg: var(--blue);
+    --sidebar-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg: #0d1117;
+    --text: #eeeeee;
+    --sidebar-bg: #001d33;
+    --sidebar-text: #ffd600;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wiki-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    width: 220px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.sidebar nav a {
+    display: block;
+    margin: 0.75rem 0;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.sidebar nav a:hover {
+    color: var(--yellow);
+}
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer; }
+
+.wiki-content {
+    flex: 1;
+    padding: 2rem;
+    transition: margin 0.3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .wiki-content {
+        padding: 1.5rem;
+    }
+        .sidebar-toggle {
+            display: block;   }
+}

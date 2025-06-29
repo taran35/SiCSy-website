@@ -102,4 +102,7 @@ Connecte-toi avec ton compte admin pour commencer à :
  - Pour trouver les modules officiels rends toi sur la page des [`modules`](?page=modules) puis suis les instructions sur le README du module que tu souhaite installer 
 
 > 🏔 **Ajout de thèmes** :
- - Pour trouver les modules officiels rends toi sur la page des [`thèmes`](?page=themes) puis suis les instructions sur le README du thème que tu souhaite installer 
+ - Pour trouver les thèmes officiels rends toi sur la page des [`thèmes`](?page=themes) puis suis les instructions pour le thème que tu souhaites installer
+
+ > 🏔 **Ajout de thèmes sur le panel administrateur** :
+ - Pour trouver les modules officiels rends toi sur la page des [`thèmes administrateurs`](?page=themes-admin) puis suis les instructions pour le thème que tu souhaites installer

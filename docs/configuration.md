@@ -96,7 +96,7 @@ Connecte-toi avec ton compte admin pour commencer à :
 > ⚠️ **Information** : La base de données permet de stocker des fichiers jusqu'à 10.000 caractères, pour modifier cette limite:
 1. Initialiser la base de données **files** en modifiant cette ligne `content VARCHAR(VALEUR_VOULU),` 
 1. Initialiser la base de données **logs** en modifiant cette ligne `content VARCHAR(VALEUR_VOULU),` 
-3. modifier le fichier [`cloud_script.js`](https://github.com/taran35/SiCSy/blob/main/main/cloud_script.js) à la ligne 411 `if (Pcontent.length < VALEUR_VOULU) {`
+3. Modifier le fichier [`cloud_script.js`](https://github.com/taran35/SiCSy/blob/main/main/cloud_script.js) à la ligne 411 `if (Pcontent.length < VALEUR_VOULU) {`
 
 > 🧩 **Ajout de modules** :
  - Pour trouver les modules officiels rends toi sur la page des [`modules`](?page=modules) puis suis les instructions sur le README du module que tu souhaite installer 

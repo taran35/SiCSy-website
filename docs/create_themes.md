@@ -38,6 +38,6 @@
 
 1. Avoir un repo github public contenant:
     - Le dossier du theme complet
-    - un README.md montrant des visuels du theme
+    - Un README.md montrant des visuels du theme
     
 2. Créer une issue ayant comme titre le nom de votre theme, en description un lien vers le repo du theme.

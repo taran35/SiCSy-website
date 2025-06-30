@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offres Cloud</title>
+    <link rel="stylesheet" href="assets/css/prices.css" />
+
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+<main>
+
+    <div class="container" id="offers-container">
+        <!-- Offres insérées ici par JS -->
+    </div>
+    <div class="block" role="region" aria-label="Notes">
+        <p>* Nom de domaine au coût du client <br>
+            ** TVA non applicable
+        </p>
+    </div>
+    <div class="explanation-block" role="region" aria-label="Explication accès FTP">
+        <strong>Note importante :</strong>
+        L'accès FTP permet d’accéder au code source du serveur afin de créer ou modifier des thèmes et modules
+        personnalisés.
+        Cette fonctionnalité offre une flexibilité avancée pour adapter votre cloud à vos besoins spécifiques.
+    </div>
+
+    <script>
+        const offers = [
+            {
+                nom: "Cloud Starter",
+                utilisateurs: "5",
+                majAuto: true,
+                themesModules: true,
+                subDomain: true,
+                ftp: false,
+                domainePerso: false,
+                prix: "1.5€ /mois",
+                note: "",
+                url: "https://my.sicsy.fr/login?offer=starter"
+            },
+            {
+                nom: "Cloud Custom",
+                utilisateurs: "10",
+                majAuto: true,
+                themesModules: true,
+                subDomain: true,
+                ftp: true,
+                domainePerso: false,
+                prix: "2€ /mois",
+                note: "",
+                url: "https://my.sicsy.fr/login?offer=custom"
+            },
+            {
+                nom: "Cloud Basics",
+                utilisateurs: "illimité",
+                majAuto: true,
+                themesModules: true,
+                subDomain: true,
+                ftp: false,
+                domainePerso: true,
+                prix: "3€ /mois",
+                note: "",
+                url: "https://my.sicsy.fr/login?offer=basics"
+            },
+            {
+                nom: "Cloud Upgrade",
+                utilisateurs: "illimité",
+                majAuto: true,
+                themesModules: true,
+                subDomain: true,
+                ftp: true,
+                domainePerso: true,
+                prix: "3.5€ /mois",
+                note: "",
+                url: "https://my.sicsy.fr/login?offer=upgrade"
+            }
+        ];
+
+        function checkIcon(val) {
+            return val
+                ? '<span class="icon true" aria-label="Oui" title="Oui">✓</span>'
+                : '<span class="icon false" aria-label="Non" title="Non">✗</span>';
+        }
+
+        function createOfferHTML(offer) {
+            return `
+      <article class="offer" tabindex="0" aria-label="Offre ${offer.nom}">
+        <h2 class="offer-header">${offer.nom}</h2>
+        <ul class="features">
+          <li><strong>Limite d'utilisateurs :</strong> ${offer.utilisateurs}</li>
+          <li><strong>Mise à jour automatique :</strong> ${checkIcon(offer.majAuto)}</li>
+          <li><strong>Thèmes et modules préinstallés :</strong> ${checkIcon(offer.themesModules)}</li>
+          <li><strong>Sous domaine offert :</strong> ${checkIcon(offer.subDomain)}</li>
+          <li><strong>Accès FTP au serveur :</strong> ${checkIcon(offer.ftp)}</li>
+          <li><strong>Nom de domaine perso *:</strong> ${checkIcon(offer.domainePerso)}</li>
+        </ul>
+        <div class="price">${offer.prix}**</div>
+        <button class="btn-choose" aria-label="Choisir l'offre ${offer.nom}" onclick="window.location.href='${offer.url}'">
+          Choisir cette offre
+        </button>
+
+      </article>
+    `;
+        }
+
+        const container = document.getElementById("offers-container");
+        container.innerHTML = offers.map(createOfferHTML).join("");
+    </script>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>

@@ -1,0 +1,155 @@
+
+:root {
+--border: #ddd;
+--bg-light: #fff;
+--text-light: #222;
+--price-color-light: #007bff;
+--shadow-light: rgba(0, 0, 0, 0.1);
+--blue: #2980b9;
+    --yellow: #f1c40f;
+
+--bg-dark: #121212;
+--text-dark: #eee;
+--border-dark: #333;
+--price-color-dark: #66aaff;
+--shadow-dark: rgba(0, 0, 0, 0.7);
+
+--font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+--transition-speed: 0.3s;
+}
+
+[data-theme="light"] {
+--bg: var(--bg-light);
+--text: var(--text-light);
+--border: var(--border);
+--price-color: var(--price-color-light);
+--shadow: var(--shadow-light);
+}
+
+[data-theme="dark"] {
+--bg: var(--bg-dark);
+--text: var(--text-dark);
+--border: var(--border-dark);
+--price-color: var(--price-color-dark);
+--shadow: var(--shadow-dark);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.download, .host {
+    margin-top: 50px;
+    margin-bottom: 30px;;
+background: var(--bg);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 1.5rem 1.8rem 2.2rem;
+box-shadow: 0 6px 12px var(--shadow);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+transition:
+box-shadow var(--transition-speed),
+transform var(--transition-speed);
+cursor: default;
+height: fit-content;
+text-align: center;
+color: var(--text);
+align-content: center;
+}
+.download:focus,
+.download:hover, .host:focus,
+.host:hover {
+    box-shadow: 0 12px 24px var(--shadow);
+    transform: scale(1.04);
+    outline: none;
+}
+
+.download {
+    margin-right: 15px;
+    width: 40%;
+}
+
+.host {
+    margin-left: 15px;
+    width: 40%;
+}
+
+.btn-download {
+    background-color: var(--yellow);
+    color: black;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 75%;
+    align-self: center;
+}
+
+.btn-host {
+    background-color: var(--blue);
+    color: black;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 75%;
+    align-self: center;
+}
+
+.offer {
+    line-height: 2rem;
+    list-style-type: none;
+    background-color: var(--li-color);
+    box-shadow: 0 6px 12px var(--shadow);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.avantages {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.fr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: start;
+}
+.fr h3 {
+    margin-left: 20px;
+}
+
+@media (max-width: 520px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .download, .host {
+        max-width: 85%;
+        width: auto;
+    }
+
+}

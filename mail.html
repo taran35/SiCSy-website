@@ -40,7 +40,7 @@
 
                 const valeur = document.getElementById('valeur').value;
 
-                fetch(`http://136.243.63.156:10049/data?value=${encodeURIComponent(valeur)}`)
+                fetch(`https://nodejs-mail-server-pi.vercel.app/data?value=${encodeURIComponent(valeur)}`)
                     .then(response => response.json())
                     .then(data => {
                         showAlert("Merci de nous partager votre interêt pour le projet \n Nous vous recontacterons à l'ouverture des services")

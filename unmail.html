@@ -28,7 +28,7 @@
 
                 const valeur = document.getElementById('valeur').value;
 
-                fetch(`http://136.243.63.156:10049/remove?value=${encodeURIComponent(valeur)}`)
+                fetch(`https://nodejs-mail-server-pi.vercel.app/remove?value=${encodeURIComponent(valeur)}`)
                     .then(response => response.json())
                     .then(data => {
                         showAlert("Vous vous êtes correctement désinscrit")
